@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Styled by M</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <meta name ="viewport" content= "width=device-width, initial-scale=1">
+</head>
+<body>
+<nav>
+    <h1>STITCHED BY M</h1>
+</nav>
+
+
+    <section class="hero">
+        <a href="index.html">
+            <img class="logoImg" src="../images/logo.png" alt="">
+        </a>
+        <div class="top-bar">
+            <span>EST. MANCHESTER</span>
+            <span class="diamond">◆</span>
+            <span>WELCOME TO MY BOOKING SITE</span>
+            <span class="diamond">◆</span>
+            <span>BY APPOINTMENT</span>
+        </div>
+
+        <p class="edition">The Weekly Chair · Vol. I</p>
+
+        <h1>
+            <span>STITCHED BY</span>
+            <span>MUHIBAH</span>
+        </h1>
+
+        <p class="services">Braids · Sleeks · LOCKS</p>
+
+        <div class="location">
+            BASED IN GORTON · MANCHESTER M18
+        </div>
+    </section>
+
+    <section class="carousel-section">
+    <div class="depth-carousel" tabindex="0">
+
+        <div class="depth-carousel__stage">
+
+            <div class="depth-carousel__card">
+                <img src="../images/1.jpeg" alt="Braids">
+                <span class="depth-carousel__tint"></span>
+            </div>
+
+            <div class="depth-carousel__card">
+                <img src="../images/2.jpeg" alt="Sleek hairstyle">
+                <span class="depth-carousel__tint"></span>
+            </div>
+
+            <div class="depth-carousel__card">
+                <img src="../images/3.jpeg" alt="Wig">
+                <span class="depth-carousel__tint"></span>
+            </div>
+
+            <div class="depth-carousel__card">
+                <img src="../images/4.jpeg" alt="Hair styling">
+                <span class="depth-carousel__tint"></span>
+            </div>
+
+            <div class="depth-carousel__card">
+                <img src="../images/5.jpeg" alt="Hair styling">
+                <span class="depth-carousel__tint"></span>
+            </div>
+
+        </div>
+
+        <button class="depth-carousel__arrow depth-carousel__arrow--prev"
+                aria-label="Previous slide">
+            ←
+        </button>
+
+        <button class="depth-carousel__arrow depth-carousel__arrow--next"
+                aria-label="Next slide">
+            →
+        </button>
+
+        <div class="depth-carousel__dots"></div>
+
+    </div>
+</section>
+
+
+    <div class="container">
+        <h1>Book your appointment</h1>
+        
+        <div id="error-message"></div>
+        <div id="success-message"></div>
+        
+        <div class="booking-wrapper">
+            <div class="services-section" id="services-container">
+            </div>
+            <div class="calendar-section">
+                <div class="calendar-header">
+                    <button id="prev-month">&lt;</button>
+                    <span class="calendar-month" id="month-display">Loading...</span>
+                    <button id="next-month">&gt;</button>
+                </div>
+
+                <div id="calendar" class="calendar-grid">
+                </div>
+
+                <div class="date-info">
+                    <span>Selected: </span>
+                    <span class="selected-date" id="selected-date-text">Choose a date</span>
+                </div>
+
+                <div class="timezone-info">TIME ZONE: LONDON (GMT+01:00)</div>
+
+                <div class="time-slots" id="time-slots">
+                </div>
+
+                <div class="booking-summary">
+                    <div class="summary-title">Booking summary</div>
+                    <div id="summary-items"></div>
+                    <div class="summary-total">
+                        <span>Total</span>
+                        <span id="total-price">£0.00</span>
+                    </div>
+
+                    <form class="customer-form" id="customer-form">
+                        <input type="text" id="customer-name" placeholder="Full name" required>
+                        <input type="email" id="customer-email" placeholder="Email" required>
+                        <input type="tel" id="customer-phone" placeholder="Phone number (optional)">
+                        <button type="submit" class="btn-book" id="book-btn" disabled>Book appointment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/index.js"></script>
+</body>
+</html>
