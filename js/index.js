@@ -641,71 +641,6 @@ carousel.addEventListener("keydown", event => {
     }
 });
 
-carousel.addEventListener("pointerdown", event => {
-
-    isDragging = true;
-
-    startX = event.clientX;
-    startPosition = position;
-
-    carousel.setPointerCapture(event.pointerId);
-});
-
-
-carousel.addEventListener("pointermove", event => {
-
-    if (!isDragging) return;
-
-    const dx =
-        event.clientX - startX;
-
-    const step =
-        Math.max(
-            settings.cardWidth * 0.55,
-            40
-        );
-
-    position =
-        startPosition -
-        dx / step;
-
-    layout(position);
-});
-
-
-carousel.addEventListener("pointerup", endDrag);
-carousel.addEventListener("pointercancel", endDrag);
-
-function endDrag() {
-
-    if (!isDragging) return;
-
-    isDragging = false;
-
-    goTo(Math.round(position));
-}
-
-carousel.addEventListener(
-    "wheel",
-    event => {
-
-        event.preventDefault();
-
-        const delta =
-            Math.abs(event.deltaX) >
-            Math.abs(event.deltaY)
-                ? event.deltaX
-                : event.deltaY;
-
-        if (delta > 0) {
-            goTo(active + 1);
-        } else {
-            goTo(active - 1);
-        }
-    },
-    { passive: false }
-);
-
 
 if (settings.autoplay) {
 
@@ -717,7 +652,7 @@ if (settings.autoplay) {
 
     }, settings.autoplayDelay);
 }
-ventListener(
+carousel.addEventListener(
     "resize",
     () => layout(position)
 );
